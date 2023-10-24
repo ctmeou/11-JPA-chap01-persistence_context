@@ -19,7 +19,7 @@ public class A_EntityLifeCycleTests {
         entityManagerFactory = Persistence.createEntityManagerFactory("jpatest");
     }
 
-    @BeforeEach //테스트가 수행 되기 전마다 한번씩
+    @BeforeEach //테스트가 수행되기 전마다 한번씩
     public void initManager() {
         entityManager = entityManagerFactory.createEntityManager();
     }
@@ -29,7 +29,7 @@ public class A_EntityLifeCycleTests {
         entityManagerFactory.close();
     }
 
-    @AfterEach //테스트가 수행 되기 전마다 한번씩
+    @AfterEach //테스트가 수행되기 전마다 한번씩
     public void closeManager() {
         entityManager.close();
     }
